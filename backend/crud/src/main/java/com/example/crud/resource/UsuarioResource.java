@@ -13,7 +13,7 @@ import java.util.List;
 
 @RestController
 @RequestMapping("/usuario")
-@Api(value = "Cadastro de Usuários", description = "Um Cadastro com os Dados do Usuário")
+@Api(value = "Cadastro de Usuários" ,description = "Um Cadastro com os Dados do Usuário")
 public class UsuarioResource {
 
     @Autowired
@@ -21,8 +21,7 @@ public class UsuarioResource {
 
     @GetMapping
     @ApiOperation(value = "Lista todos os Usuários")
-    public List<Usuario> Listar() {
+    public List<Usuario> Listar(){
         return usuarioRepository.findAll();
-
     }
 }
